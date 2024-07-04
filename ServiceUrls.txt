@@ -1,0 +1,4 @@
+
+WebApiGateway -> http://localhost:5000
+
+ProductService.Api -> http://localhost:5001

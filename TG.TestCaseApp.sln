@@ -25,13 +25,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B1A1F4E1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{297D2C0D-4DD8-4C94-8812-A65AE808FDE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Base", "src\BuildingBlocks\EventBus\EventBus.Base\EventBus.Base.csproj", "{8B05A0AD-5737-41F5-9E24-680C4C4F3702}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Base", "src\BuildingBlocks\EventBus\EventBus.Base\EventBus.Base.csproj", "{8B05A0AD-5737-41F5-9E24-680C4C4F3702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Factory", "src\BuildingBlocks\EventBus\EventBus.Factory\EventBus.Factory.csproj", "{1905A42E-4D2A-4ED6-83DB-4E8D0617CA65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Factory", "src\BuildingBlocks\EventBus\EventBus.Factory\EventBus.Factory.csproj", "{1905A42E-4D2A-4ED6-83DB-4E8D0617CA65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\EventBus.RabbitMQ\EventBus.RabbitMQ.csproj", "{47B74738-2A8C-4B8E-B200-3FE2B31012E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\EventBus.RabbitMQ\EventBus.RabbitMQ.csproj", "{47B74738-2A8C-4B8E-B200-3FE2B31012E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.UnitTest", "tests\BuildingBlocks\EventBus.UnitTest\EventBus.UnitTest.csproj", "{DD92D820-EFEC-4F8F-B760-F183E523279A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.UnitTest", "tests\BuildingBlocks\EventBus.UnitTest\EventBus.UnitTest.csproj", "{DD92D820-EFEC-4F8F-B760-F183E523279A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService.Api", "src\Services\ProductService\ProductService.Api\ProductService.Api.csproj", "{04F03C72-C7E8-4661-8D37-83578D961910}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{77C5AFDE-B732-4AC0-8C78-AEABBC1C85E6}"
+	ProjectSection(SolutionItems) = preProject
+		ServiceUrls.txt = ServiceUrls.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +66,10 @@ Global
 		{DD92D820-EFEC-4F8F-B760-F183E523279A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD92D820-EFEC-4F8F-B760-F183E523279A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD92D820-EFEC-4F8F-B760-F183E523279A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F03C72-C7E8-4661-8D37-83578D961910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F03C72-C7E8-4661-8D37-83578D961910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F03C72-C7E8-4661-8D37-83578D961910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F03C72-C7E8-4661-8D37-83578D961910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +88,7 @@ Global
 		{1905A42E-4D2A-4ED6-83DB-4E8D0617CA65} = {E2C6926B-61A4-4BFE-BF01-A09F8EB7E904}
 		{47B74738-2A8C-4B8E-B200-3FE2B31012E6} = {E2C6926B-61A4-4BFE-BF01-A09F8EB7E904}
 		{DD92D820-EFEC-4F8F-B760-F183E523279A} = {297D2C0D-4DD8-4C94-8812-A65AE808FDE9}
+		{04F03C72-C7E8-4661-8D37-83578D961910} = {301CB353-3FF7-4225-AC3D-308F575EF38C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E1197E8-2F72-4D63-8995-9F5B42376481}
