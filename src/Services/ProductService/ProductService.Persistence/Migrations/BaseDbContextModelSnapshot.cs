@@ -56,13 +56,13 @@ namespace ProductService.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8f5f0acc-727e-48b0-a7d9-ab69202bb835"),
+                            Id = new Guid("68a7e592-7610-4458-a8a9-2e83bb9e5a12"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Computer"
                         },
                         new
                         {
-                            Id = new Guid("c8df2d54-377f-4b10-8540-78e17a6c2418"),
+                            Id = new Guid("53c0c7ae-747e-4dd6-9c55-4e2beb088a09"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Phone"
                         });
@@ -86,6 +86,11 @@ namespace ProductService.Persistence.Migrations
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("DeletedDate");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Image");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -112,73 +117,82 @@ namespace ProductService.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ee003206-5809-4bc9-8972-d91d2a8a7f59"),
-                            CategoryId = new Guid("8f5f0acc-727e-48b0-a7d9-ab69202bb835"),
+                            Id = new Guid("9b14f4b6-e6da-4f21-ab8f-78e5ef83b487"),
+                            CategoryId = new Guid("68a7e592-7610-4458-a8a9-2e83bb9e5a12"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Image = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/acer/thumb/142883-4_small.jpg",
                             Name = "LENOVO AIO 3 INTEL CORE İ5 12450H 3.3 GHZ 8 GB 512 GB",
                             Price = 16000m
                         },
                         new
                         {
-                            Id = new Guid("32cbdcda-453c-4c43-9bbf-64f641309948"),
-                            CategoryId = new Guid("8f5f0acc-727e-48b0-a7d9-ab69202bb835"),
+                            Id = new Guid("710cde63-a433-4f0e-93a1-f175d97ec869"),
+                            CategoryId = new Guid("68a7e592-7610-4458-a8a9-2e83bb9e5a12"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Image = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/grundig/thumb/0001-layer-3_small.jpg",
                             Name = "EXPER XERA XC136 INTEL CORE İ5 13400F 2.5GHZ 16GB",
                             Price = 15000m
                         },
                         new
                         {
-                            Id = new Guid("a2fb2a7c-7cae-4a6f-88bd-419fc61383c4"),
-                            CategoryId = new Guid("8f5f0acc-727e-48b0-a7d9-ab69202bb835"),
+                            Id = new Guid("fbb71f16-638a-4c7d-85d6-98a86ee5cf74"),
+                            CategoryId = new Guid("68a7e592-7610-4458-a8a9-2e83bb9e5a12"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Image = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/hp/thumb/146251-1_small.jpg",
                             Name = "HP 898B7EA INTEL CORE İ5 1335U 3.4 GHZ 8 GB 512 GB",
                             Price = 16500m
                         },
                         new
                         {
-                            Id = new Guid("b275118d-9788-418f-8a67-e097b8c1100a"),
-                            CategoryId = new Guid("8f5f0acc-727e-48b0-a7d9-ab69202bb835"),
+                            Id = new Guid("e3882ee9-2c8e-4d85-90b4-86217149fe1a"),
+                            CategoryId = new Guid("68a7e592-7610-4458-a8a9-2e83bb9e5a12"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Image = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/philips/thumb/140996-1_large.jpg",
                             Name = "EXPER DIAMOND DEX600 INTEL CORE İ5 11400 2.6GHZ 8GB 256GB SSD INTEL UHD730",
                             Price = 35000m
                         },
                         new
                         {
-                            Id = new Guid("bd7714a0-0a16-4674-a95b-58e9e7ad3979"),
-                            CategoryId = new Guid("8f5f0acc-727e-48b0-a7d9-ab69202bb835"),
+                            Id = new Guid("c9ba11e2-0a37-416b-88f1-ff272ec75fb1"),
+                            CategoryId = new Guid("68a7e592-7610-4458-a8a9-2e83bb9e5a12"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Image = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/exper/thumb/144179-1_large.jpg",
                             Name = "CASPER Excalibur E650 İ5 12400F 2.5GHZ 32GB 500GB",
                             Price = 15400m
                         },
                         new
                         {
-                            Id = new Guid("2b7f8b22-176b-42b6-8218-a18a9df2a28d"),
-                            CategoryId = new Guid("c8df2d54-377f-4b10-8540-78e17a6c2418"),
+                            Id = new Guid("f173c6d3-1222-4742-8c69-5de31e63b602"),
+                            CategoryId = new Guid("53c0c7ae-747e-4dd6-9c55-4e2beb088a09"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Image = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/129895-1_large.jpg",
                             Name = "iPhone 13 128 Gb Akıllı Telefon Mavi",
                             Price = 25000m
                         },
                         new
                         {
-                            Id = new Guid("659f84b4-7299-42b4-8818-e413b6816a88"),
-                            CategoryId = new Guid("c8df2d54-377f-4b10-8540-78e17a6c2418"),
+                            Id = new Guid("13fd2cc8-7c81-49d8-914e-84ddaebdf725"),
+                            CategoryId = new Guid("53c0c7ae-747e-4dd6-9c55-4e2beb088a09"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Image = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/129885-1_large.jpg",
                             Name = "iPhone 13 128 Gb Akıllı Telefon Yıldız Işığı",
                             Price = 12000m
                         },
                         new
                         {
-                            Id = new Guid("fae057c3-4ea0-44c8-9fa2-038525cb8eb1"),
-                            CategoryId = new Guid("c8df2d54-377f-4b10-8540-78e17a6c2418"),
+                            Id = new Guid("c86535ef-33b9-4367-b9dd-789a6fd0a728"),
+                            CategoryId = new Guid("53c0c7ae-747e-4dd6-9c55-4e2beb088a09"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Image = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/129743-1_large.jpg",
                             Name = "Samsung Galaxy A15 6/128 Gb Akıllı Telefon Siyah",
                             Price = 35000m
                         },
                         new
                         {
-                            Id = new Guid("d2c968b9-80ec-4c8d-a4df-f4a43ae2832c"),
-                            CategoryId = new Guid("c8df2d54-377f-4b10-8540-78e17a6c2418"),
+                            Id = new Guid("734d45b1-fbc5-41ac-b423-31cc0bf48031"),
+                            CategoryId = new Guid("53c0c7ae-747e-4dd6-9c55-4e2beb088a09"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Image = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/tcl/thumb/142148-1_large.jpg",
                             Name = "Xiaomi Redmi 12 8/128 GB Gece Yarısı Siyahı Akıllı Telefon",
                             Price = 25400m
                         });

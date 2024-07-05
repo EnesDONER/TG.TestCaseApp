@@ -106,36 +106,40 @@ document.getElementById('categoryList').addEventListener('click', function(event
     }
   });
 
- function setProduct(data){
-
+function setProduct(data) {
     const productListDiv = document.getElementById('productList');
 
     data.Items.forEach(item => {
-      const colDiv = document.createElement('div');
-      colDiv.classList.add('col');
+        const colDiv = document.createElement('div');
+        colDiv.classList.add('col');
 
-      const cardDiv = document.createElement('div');
-      cardDiv.classList.add('card', 'h-100');
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('card', 'h-100');
 
-      const cardBodyDiv = document.createElement('div');
-      cardBodyDiv.classList.add('card-body');
+        const cardImage = document.createElement('img');
+        cardImage.classList.add('card-img-top');
+        cardImage.src = item.Image;
 
-      const cardTitle = document.createElement('h5');
-      cardTitle.classList.add('card-title');
-      cardTitle.textContent = item.Name;
+        const cardBodyDiv = document.createElement('div');
+        cardBodyDiv.classList.add('card-body');
 
-      const cardText = document.createElement('p');
-      cardText.classList.add('card-text');
-      cardText.textContent = `Price: ${item.Price}₺`;
+        const cardTitle = document.createElement('h5');
+        cardTitle.classList.add('card-title');
+        cardTitle.textContent = item.Name;
 
-      cardBodyDiv.appendChild(cardTitle);
-      cardBodyDiv.appendChild(cardText);
+        const cardText = document.createElement('p');
+        cardText.classList.add('card-text');
+        cardText.textContent = `Price: ${item.Price}₺`;
 
-      cardDiv.appendChild(cardBodyDiv);
-      colDiv.appendChild(cardDiv);
-      productListDiv.appendChild(colDiv);
+        cardDiv.appendChild(cardImage);
+        cardBodyDiv.appendChild(cardTitle);
+        cardBodyDiv.appendChild(cardText);
+
+        cardDiv.appendChild(cardBodyDiv);
+        colDiv.appendChild(cardDiv);
+        productListDiv.appendChild(colDiv);
     });
-};
+}
 
 function clearProductList() {
     const productListDiv = document.getElementById('productList');
