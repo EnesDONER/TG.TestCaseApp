@@ -1,6 +1,7 @@
 using ProductService.Application;
 using ProductService.Persistence;
 using Core.CrossCuttingConcerns.Exceptions.Extensions;
+using System.Text.Json.Serialization;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+        .AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+            options.JsonSerializerOptions.PropertyNamingPolicy = null;
+        });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddApplicationServices();
@@ -26,8 +33,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.ConfigureCustomExceptionMiddleware();
-
+app.ConfigureCustomExceptionMiddleware();
 
 app.UseHttpsRedirection();
 

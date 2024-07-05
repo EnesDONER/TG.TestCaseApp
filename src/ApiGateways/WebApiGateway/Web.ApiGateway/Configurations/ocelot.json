@@ -11,7 +11,22 @@
         }
       ],
 
-      "UpstreamPathTemplate": "/product/{everything}",
+      "UpstreamPathTemplate": "/products/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "DownstreamPathTemplate": "/api/categories/{everything}",
+      "DownstreamScheme": "http",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+
+      "UpstreamPathTemplate": "/categories/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
       "UpstreamScheme": "http"
     }

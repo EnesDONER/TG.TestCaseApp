@@ -1,0 +1,15 @@
+.card {
+    margin-bottom: 1em;
+    float: left; 
+    box-sizing: border-box; 
+  }
+  
+  .container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+  }
+
+  .clicked{
+    background-color: lightblue;
+  }
