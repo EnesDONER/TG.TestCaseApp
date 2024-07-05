@@ -19,6 +19,23 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
 
         builder.HasMany(b => b.Products);
 
+        builder.HasData(_seeds);
+
         builder.HasQueryFilter(b => !b.DeletedDate.HasValue);
+    }
+    public static Guid CategoryComputerId { get; } = Guid.NewGuid();
+    public static Guid CategoryPhoneId { get; } = Guid.NewGuid();
+    private IEnumerable<Category> _seeds
+    {
+        get
+        {
+            List<Category> categories = new()
+            {
+                new Category(CategoryComputerId, "Computer"),
+                new Category(CategoryPhoneId, "Phone")
+            };
+
+            return categories;
+        }
     }
 }

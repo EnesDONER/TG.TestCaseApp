@@ -12,6 +12,5 @@ public class MappingProfile : Profile
     {
         CreateMap<Category, GetListCategoryListItemDto>().ReverseMap();
         CreateMap<Paginate<Category>, GetListResponse<GetListCategoryListItemDto>>().ReverseMap();
-
     }
 }
