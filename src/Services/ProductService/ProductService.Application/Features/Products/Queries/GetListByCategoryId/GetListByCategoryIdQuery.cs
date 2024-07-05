@@ -4,7 +4,7 @@ using Core.Application.Responses;
 using MediatR;
 using ProductService.Application.Services.Repositories;
 
-namespace ProductService.Application.Features.Products.Queries.GetByCategoryId;
+namespace ProductService.Application.Features.Products.Queries.GetListByCategoryId;
 
 public class GetListByCategoryIdQuery : IRequest<GetListResponse<GetListByCategoryIdResponse>>
 {

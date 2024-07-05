@@ -1,4 +1,4 @@
-﻿namespace ProductService.Application.Features.Products.Queries.GetByCategoryId;
+﻿namespace ProductService.Application.Features.Products.Queries.GetListByCategoryId;
 
 public class GetListByCategoryIdResponse
 {

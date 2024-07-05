@@ -1,12 +1,12 @@
 ﻿using Core.Application.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using ProductService.Application.Features.Products.Queries.GetByCategoryId;
+using ProductService.Application.Features.Products.Queries.GetListByCategoryId;
 using ProductService.Application.Features.Products.Queries.GetList;
 
 namespace ProductService.Api.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : BaseController
     {

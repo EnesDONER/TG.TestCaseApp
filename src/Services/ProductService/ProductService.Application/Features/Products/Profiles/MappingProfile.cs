@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Core.Application.Responses;
 using Core.Persistence.Paging;
-using ProductService.Application.Features.Products.Queries.GetByCategoryId;
+using ProductService.Application.Features.Products.Queries.GetListByCategoryId;
 using ProductService.Application.Features.Products.Queries.GetList;
 using ProductService.Domain;
 
