@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\CorePackages\Core.Packages\Core.Persistence\Core.Persistence.csproj" />
-    <ProjectReference Include="..\ProductService.Api\ProductService.Api.csproj" />
     <ProjectReference Include="..\ProductService.Application\ProductService.Application.csproj" />
     <ProjectReference Include="..\ProductService.Domain\ProductService.Domain.csproj" />
   </ItemGroup>
